@@ -27,7 +27,7 @@ Demo: [JayBee TikTok Downloader](https://t.me/JayBeeTikTokBot)
 - `BOT_TOKEN` : Your bot token, generate it from https://t.me/BotFather
 - `WORKERS` : Number of threads to use, this depends on usage. 4 is the recommended (and default) amount, but your experience may vary.
 - `CHANNEL_URL` : URL of your Telegram channel link.
-- `BOT_URL` : Username of your Telegram Bot (without @). Example: **_JayBeeTikTokBot_**
+- `BOT_URL` : Username of your Telegram Bot (without @). Example: **_s_awaftah_**
 
 
 
@@ -43,6 +43,6 @@ Demo: [JayBee TikTok Downloader](https://t.me/JayBeeTikTokBot)
 
 ---
 ### Star the Repo if you find it useful :heart:
-### © [TerminalWarlord](https://t.me/JayBeeBots)
+### © [TerminalWarlord](https://www.arabi-plus.com/)
 #### All Rights Reserved
 ---
