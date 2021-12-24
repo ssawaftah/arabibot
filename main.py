@@ -31,10 +31,10 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
+    kb = [[InlineKeyboardButton('قناة المطور', url=chnnl),InlineKeyboardButton('اتصل بنا', url="https://t.me/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
-                          "__**Developer :**__ __@JayBeeDev__\n"
+    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك "
+                          "__**Developer :**__ __@s_awaftah__\n"
                           "__**Language :**__ __Python__\n"
                           "__**Framework :**__ __🔥 Pyrogram__",
                      parse_mode='md',
@@ -45,10 +45,10 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://t.me/arabii_plus")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download any TikTok video from a given link.\n\n"
-                                            "__Send me a TikTok video link__",
+    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n"
+                                            "__ارسل لي رابط مقطع التيك توك لاقوم بتحميلة__",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
