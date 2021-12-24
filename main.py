@@ -33,9 +33,9 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 def start(client, message):
     kb = [[InlineKeyboardButton('موقع عربي بلس', url=chnnl),InlineKeyboardButton('اتصل بنا', url="https://t.me/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n "
-                          
-                           "تابع المطور على انستغرام : https://instagram.com/s_awaftah",
+    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n "       
+                           "تابع المطور على انستغرام :
+https://instagram.com/s_awaftah",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
