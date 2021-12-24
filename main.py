@@ -43,7 +43,7 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://t.me/arabii_plus")]]
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://www.arabi-plus.com")]]
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n"
                                             "__ارسل لي رابط مقطع التيك توك لاقوم بتحميلة__",
