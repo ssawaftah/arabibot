@@ -34,7 +34,8 @@ def start(client, message):
     kb = [[InlineKeyboardButton('موقع عربي بلس', url=chnnl),InlineKeyboardButton('اتصل بنا', url="https://t.me/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n "
-                          "**ملاحظة :**اذا كان الفيديو خاص يمكنك تحميلة ايضا\n",
+                          "**ملاحظة :**اذا كان الفيديو خاص يمكنك تحميلة ايضا"
+                           "<a href='https://t.me/arabii_plus'>تابع المطور</a>",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
