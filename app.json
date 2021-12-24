@@ -2,15 +2,15 @@
   "name": "arabi plus",
   "description": "A Telegram bot to download TikTok videos without any watermark",
   "logo" : "https://telegra.ph/file/05bae0725724007c72fa1.jpg",
-  "success_url" : "https://t.me/JayBeeBots",
+  "success_url" : "https://www.arabi-plus.com/",
   "keywords": [
     "telegram",
     "bot",
     "tiktok",
     "jaybee"
   ],
-  "repository": "https://github.com/TerminalWarlord/TikTok-Downloader-Bot",
-  "website": "https://github.com/TerminalWarlord/TikTok-Downloader-Bot",
+  "repository": "https://www.arabi-plus.com/",
+  "website": "https://www.arabi-plus.com",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot Bot Token, get this value from @BotFather.",
