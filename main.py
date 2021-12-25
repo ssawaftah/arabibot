@@ -96,7 +96,7 @@ def tiktok_dl(client, message):
                 if percent > 100:
                     percent = 100
                 if show == 1:
-              try:
+try:
                         a.edit(f'__**URL :**__ __{message.text}__\n'
                                f'__**Total Size :**__ __{total_size} MB__\n'
                                f'__**Downloaded :**__ __{percent}%__\n',
