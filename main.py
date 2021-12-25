@@ -1,5 +1,4 @@
-# Copyright 2021 TerminalWarlord under the terms of the MIT
-# license found at https://github.com/TerminalWarlord/TikTok-Downloader-Bot/blob/master/LICENSE
+/blob/master/LICENSE
 # Encoding = 'utf-8'
 # Fork and Deploy, do not modify this repo and claim it yours
 # For collaboration mail me at dev.jaybee@gmail.com
@@ -31,10 +30,12 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('موقع عربي بلس', url=chnnl),InlineKeyboardButton('اتصل بنا', url="https://t.me/s_awaftah")]]
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n "       
-                           "تابع المطور على انستغرام :https://instagram.com/s_awaftah",
+    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
+                          "__**Developer :**__ __@JayBeeDev__\n"
+                          "__**Language :**__ __Python__\n"
+                          "__**Framework :**__ __🔥 Pyrogram__",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
@@ -43,10 +44,10 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://www.arabi-plus.com")]]
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"مرحبا بكم في بوت تحميل مقاطع تيك توك ، يمكنكم تحميل مقاطع تيك توك عبر ارسال رابط الفيديو فقط وسيقوم البوت بجلب الفيديو لك\n\n"
-                                            "__ارسل لي رابط مقطع التيك توك لاقوم بتحميلة__",
+    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download any TikTok video from a given link.\n\n"
+                                            "__Send me a TikTok video link__",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
@@ -96,7 +97,7 @@ def tiktok_dl(client, message):
                 if percent > 100:
                     percent = 100
                 if show == 1:
-try:
+                    try:
                         a.edit(f'__**URL :**__ __{message.text}__\n'
                                f'__**Total Size :**__ __{total_size} MB__\n'
                                f'__**Downloaded :**__ __{percent}%__\n',
@@ -109,11 +110,12 @@ try:
         a.edit(f'__Downloaded to the server!\n'
                f'Uploading to Telegram Now ⏳__')
         start = time.time()
-        title = filename      
+        title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"\n\n"
-                          f"تابع المطور على انستغرام : https://instagram.com/s_awaftah",
+                          caption=f"**File :** __{filename}__\n"
+                          f"**Size :** __{total_size} MB__\n\n"
+                          f"__Uploaded by @{BOT_URL}__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
