@@ -106,14 +106,10 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__Downloaded to the server!\n'
-               f'Uploading to Telegram Now ⏳__')
-        start = time.time()
-        title = filename
+        
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
                           caption=f"**الفيديو جاهز للتحميل 👍**\n"
-                          f"**حجم الملف :** __{total_size} MB__\n\n"
                           f"__Powered by @arabii_plus__",
                           file_name=f"{directory}",
                           parse_mode='md',
