@@ -33,7 +33,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 def start(client, message):
     kb = [[InlineKeyboardButton('موقع عربي بلس 🌐', url=chnnl),InlineKeyboardButton('تابع المطور على انستغرام', url="https://instagram.com/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"مرحباً انا بوت **Tiktok download video** يمكنني تحمبل مقاطع فيديو تيك توك عبر ارسال الرابط لي فقط\n\nقم بأرسال رابط فيديو تيك توك المراد تنزيله\n\n"
+    app.send_message(chat_id=message.from_user.id, text=f"مرحباً انا بوت **Tiktok download video** يمكنني تحميل مقاطع فيديو تيك توك عبر ارسال الرابط لي فقط.\n\nقم بأرسال رابط فيديو تيك توك المراد تنزيله.\n\n"
                           "__**قناة عربي بلس**__ __@arabii_plus__\n",
                      parse_mode='md',
                      reply_markup=reply_markup)
@@ -112,9 +112,9 @@ def tiktok_dl(client, message):
         title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"**File :** __{filename}__\n"
-                          f"**Size :** __{total_size} MB__\n\n"
-                          f"__Uploaded by @{BOT_URL}__",
+                          caption=f"**الفيديو جاهز للتحميل 👍**\n"
+                          f"**حجم الملف :** __{total_size} MB__\n\n"
+                          f"__Powered by @arabii_plus__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
