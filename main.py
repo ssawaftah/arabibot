@@ -31,7 +31,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
+    kb = [[InlineKeyboardButton('موقع عربي بلس 🌐', url=chnnl),InlineKeyboardButton('🔰 قناة عربي بلس', url="https://t.me/arabii_plus")]]
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
                           "__**Developer :**__ __@JayBeeDev__\n"
