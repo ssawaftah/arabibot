@@ -56,7 +56,7 @@ def help(client, message):
 @app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
 def tiktok_dl(client, message):
     a = app.send_message(chat_id=message.chat.id,
-                         text='',
+                         text='__جارٍ معالجة الفيديو__',
                          parse_mode='md')
     link = re.findall(r'\bhttps?://.*[(tiktok|douyin)]\S+', message.text)[0]
     link = link.split("?")[0]
@@ -108,8 +108,8 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__3h'
-               f'h__')
+        a.edit(f'__يرجى الإنتظار'
+               f' تمت معالجة الفيديو__')
         start = time.time()
         title = filename
         app.send_document(chat_id=message.chat.id,
