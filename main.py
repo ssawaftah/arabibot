@@ -108,8 +108,8 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__يرجى الإنتظار'
-               f' تمت معالجة الفيديو__')
+        a.edit(f'__تمت معالجة'
+               f'  الفيديو__')
         start = time.time()
         title = filename
         app.send_document(chat_id=message.chat.id,
