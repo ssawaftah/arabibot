@@ -29,7 +29,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 
 
-app.on_message(filters.command('start'))
+@app.on_message(filters.command('start'))
 def start(client, message):
     kb = [[InlineKeyboardButton('موقع عربي بلس 🌐', url=chnnl),InlineKeyboardButton('تابع المطور على انستغرام', url="https://instagram.com/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
