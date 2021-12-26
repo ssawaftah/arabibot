@@ -108,7 +108,7 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__h'
+        a.edit(f'__3h'
                f'h__')
         start = time.time()
         title = filename
