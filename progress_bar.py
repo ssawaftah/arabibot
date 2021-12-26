@@ -16,12 +16,12 @@ async def progress(current,total,a,start, title):
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-        progress = "عععع".format(
+        progress = "".format(
             ''.join(["●" for i in range(math.floor(percentage / 5))]),
             ''.join([" " for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "تت".format(
+        tmp = progress + "".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
@@ -30,7 +30,7 @@ async def progress(current,total,a,start, title):
         )
         try:
             await a.edit(
-                text=f"عه"
+                text=f""
                 f"{tmp}"
             )
         except:
