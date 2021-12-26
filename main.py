@@ -29,7 +29,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 
 
-@app.on_message(filters.command('start'))
+app.on_message(filters.command('start'))
 def start(client, message):
     kb = [[InlineKeyboardButton('موقع عربي بلس 🌐', url=chnnl),InlineKeyboardButton('تابع المطور على انستغرام', url="https://instagram.com/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
@@ -54,17 +54,13 @@ def help(client, message):
 
 @app.on_message(filters.command('follow'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('facebook', url="https://www.facebook.com/sawaftah0"),InlineKeyboardButton('instagram', url="https://instagram.com/s_awaftah"),InlineKeyboardButton('twitter', url="https://twitter.com/s_awaftah")]]
-    reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"متابعة المطور :",
-                     parse_mode='md',
-                     reply_markup=reply_markup)
+    kb = [[InlineKeyboardButton('facebook', url="https://www.facebook.com/sawaftah0"),InlineKeyboardButton('instagram', url="https://instagram.com/s_awaftah"),InlineKeyboardButton('twitter', url="https://twitter.com/s_awaftah")]] reply_markup = InlineKeyboardMarkup(kb) app.send_message(chat_id=message.from_user.id, text=f"متابعة المطور :", parse_mode='md', reply_markup=reply_markup)
 
 
 @app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
 def tiktok_dl(client, message):
     a = app.send_message(chat_id=message.chat.id,
-                         text='__جارٍ التحميل__',
+                         text='__Downloading File to the Server__',
                          parse_mode='md')
     link = re.findall(r'\bhttps?://.*[(tiktok|douyin)]\S+', message.text)[0]
     link = link.split("?")[0]
@@ -116,13 +112,15 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__جارٍ التحميل__')
+        a.edit(f'__Downloaded to the server!\n'
+               f'Uploading to Telegram Now ⏳__')
         start = time.time()
         title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"**الفيديو جاهز للتحميل 👍**\n"
-                          f"__Powered by @arabii_plus__",
+                          caption=f"**File :** __{filename}__\n"
+                          f"**Size :** __{total_size} MB__\n\n"
+                          f"__Uploaded by @{BOT_URL}__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
