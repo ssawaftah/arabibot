@@ -54,9 +54,9 @@ def help(client, message):
 
 @app.on_message(filters.command('follow'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('اتصل بنا ✉', url="https://t.me/s_awaftah")]]
+    kb = [[InlineKeyboardButton('facebook', url="https://www.facebook.com/sawaftah0"),InlineKeyboardButton('instagram', url="https://instagram.com/s_awaftah"),InlineKeyboardButton('twitter', url="https://twitter.com/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"مرحباً هل تحتاج للمساعدة ؟ ",
+    app.send_message(chat_id=message.from_user.id, text=f"متابعة المطور :",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
