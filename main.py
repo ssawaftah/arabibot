@@ -108,8 +108,8 @@ def tiktok_dl(client, message):
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__Downloaded to the server!\n'
-               f'Uploading to Telegram Now ⏳__')
+        a.edit(f'__'
+               f'__')
         start = time.time()
         title = filename
         app.send_document(chat_id=message.chat.id,
