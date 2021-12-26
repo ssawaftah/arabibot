@@ -122,9 +122,7 @@ def tiktok_dl(client, message):
         title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"**File :** __{filename}__\n"
-                          f"**Size :** __{total_size} MB__\n\n"
-                          f"__Uploaded by @{BOT_URL}__",
+                          caption=f"__Powered by @arabii_plus__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
