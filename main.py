@@ -30,31 +30,27 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 
 @app.on_message(filters.command('start'))
-                     def start(client, message):
-                         kb = [[InlineKeyboardButton('موقع عربي بلس 🌐', url=chnnl),InlineKeyboardButton('تابع المطور على انستغرام', url="https://instagram.com/s_awaftah")]]
-                         reply_markup = InlineKeyboardMarkup(kb)
-                         app.send_message(chat_id=message.from_user.id, text=f"مرحباً انا بوت **Tiktok download video** يمكنني تحميل مقاطع فيديو تيك توك عبر ارسال الرابط لي فقط.\n\nقم بأرسال رابط فيديو تيك توك المراد تنزيله.\n\n"
-                                               "__**قناة عربي بلس**__ __@arabii_plus__\n",
-                                          parse_mode='md',
-                                          reply_markup=reply_markup)
-                     
-                     
-                     
-                     
-                     @app.on_message(filters.command('help'))
-                     def help(client, message):
-                         kb = [[InlineKeyboardButton('اتصل بنا ✉', url="https://t.me/s_awaftah")]]
-                         reply_markup = InlineKeyboardMarkup(kb)
-                         app.send_message(chat_id=message.from_user.id, text=f"مرحباً هل تحتاج للمساعدة ؟ ",
-                                          parse_mode='md',
-                                          reply_markup=reply_markup)
-                     
-                     
-                     
-                     
-                     @app.on_message(filters.command('follow'))
-                     def help(client, message):
-                         kb = [[InlineKeyboardButton('facebook', url="https://www.facebook.com/sawaftah0"),InlineKeyboardButton('instagram', url="https://instagram.com/s_awaftah"),InlineKeyboardButton('twitter', url="https://twitter.com/s_awaftah")]] reply_markup = InlineKeyboardMarkup(kb) app.send_message(chat_id=message.from_user.id, text=f"متابعة المطور :", parse_mode='md', reply_markup=reply_markup)
+def start(client, message):
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
+    reply_markup = InlineKeyboardMarkup(kb)
+    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
+                          "__**Developer :**__ __@JayBeeDev__\n"
+                          "__**Language :**__ __Python__\n"
+                          "__**Framework :**__ __🔥 Pyrogram__",
+                     parse_mode='md',
+                     reply_markup=reply_markup)
+
+
+
+
+@app.on_message(filters.command('help'))
+def help(client, message):
+    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/TerminalWarlord/TikTok-Downloader-Bot/")]]
+    reply_markup = InlineKeyboardMarkup(kb)
+    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download any TikTok video from a given link.\n\n"
+                                            "__Send me a TikTok video link__",
+                     parse_mode='md',
+                     reply_markup=reply_markup)
 
 
 @app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
