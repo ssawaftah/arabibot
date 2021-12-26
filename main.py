@@ -43,9 +43,20 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('اتصل بنا', url="https://t.me/s_awaftah")]]
+    kb = [[InlineKeyboardButton('اتصل بنا ✉', url="https://t.me/s_awaftah")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"اتصل بنا",
+    app.send_message(chat_id=message.from_user.id, text=f"هل تحتاج للمساعدة ؟",
+                     parse_mode='md',
+                     reply_markup=reply_markup)
+
+
+
+
+@app.on_message(filters.command('follow'))
+def help(client, message):
+    kb = [[InlineKeyboardButton('facebook', url="https://www.facebook.com/sawaftah0"),InlineKeyboardButton('twitter', url="https://twitter.com/s_awaftah"),InlineKeyboardButton('instagram', url="https://www.instagram.com/s_awaftah")]]
+    reply_markup = InlineKeyboardMarkup(kb)
+    app.send_message(chat_id=message.from_user.id, text=f"متابعة المطور :",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
